@@ -7,9 +7,6 @@ pipeline{
 		stage("build"){
 		
 			steps{
-				bat "cd src"
-				bat "composer install"
-				bat "cd .."
 				bat "docker-compose down"
         			bat "docker-compose up -d --force-recreate --no-deps --build"
 				echo 'building the application...'
