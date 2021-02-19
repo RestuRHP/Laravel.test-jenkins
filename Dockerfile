@@ -4,4 +4,6 @@ RUN docker-php-ext-install pdo pdo_mysql
 
 RUN a2enmod rewrite
 
+RUN composer install
+
 # ADD conf/apache.conf /etc/apache2/sites-available/000-default.conf
