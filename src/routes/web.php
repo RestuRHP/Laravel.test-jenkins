@@ -20,6 +20,3 @@ Route::get('/', function () {
 Route::get('test', function () {
     return "Docker works!";
 });
-Route::get('test/welcome', function () {
-    return view('welcome');
-});
