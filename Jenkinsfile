@@ -11,6 +11,7 @@ pipeline{
 				bat "composer install"
 				bat "cd .."
 				bat "rename  src\.env.example .env
+				bat "docker-compose down"
         			bat "docker-compose up -d --force-recreate --no-deps --build"
 				echo 'building the application...'
 				echo 'the application is built'
