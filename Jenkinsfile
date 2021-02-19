@@ -7,7 +7,7 @@ pipeline{
 		stage("build"){
 		
 			steps{
-        			
+        			sh "ipconfig"
 				echo 'building the application...'
 				echo 'the application is built'
 			}
