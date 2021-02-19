@@ -7,7 +7,7 @@ pipeline{
 		stage("build"){
 		
 			steps{
-        			sh "#!/bin/bash"+ "docker-compose up --build"
+        			sh "docker-compose up --build"
 				echo 'building the application...'
 				echo 'the application is built'
 			}
