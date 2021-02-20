@@ -10,7 +10,7 @@ pipeline{
 				bat "docker-compose down"
         			bat "docker-compose up -d --force-recreate --no-deps --build"
 				echo 'building the application...'
-				echo 'the application is built'
+				echo 'the application is d'
 			}
 		}
 		stage("test"){
