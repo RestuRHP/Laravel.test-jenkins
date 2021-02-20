@@ -10,7 +10,7 @@ pipeline{
 				bat "docker-compose down"
         			bat "docker-compose up -d --force-recreate --no-deps --build"
 				bat "docker-compose exec php composer install"
-				bat "docker-compose exec php php artisan key:generate"
+				winpty "docker-compose exec php php artisan key:generate"
 				echo 'building the application...'
 				echo 'the application is d'
 			}
