@@ -8,8 +8,8 @@ pipeline{
 		
 			steps{
         			bat "docker-compose up -d --force-recreate --no-deps --build"
-				winpty "docker-compose exec php composer install"
-				winpty "docker-compose exec php php artisan key:generate"
+				bat "docker-compose exec -T php composer install"
+				bat "docker-compose exec -T php php artisan key:generate"
 				echo 'building the application...'
 				echo 'the application is d'
 			}
