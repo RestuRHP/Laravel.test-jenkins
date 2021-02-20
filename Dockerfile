@@ -1,6 +1,8 @@
 FROM php:7.3-apache
 
 RUN docker-php-ext-install pdo pdo_mysql
+RUN apt-get -y install --fix-missing zip unzip
+RUN apt-get -y install --fix-missing git
 
 COPY --from=composer:latest /usr/bin/composer /usr/bin/composer
 
