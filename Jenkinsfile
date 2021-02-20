@@ -8,6 +8,7 @@ pipeline{
 		
 			steps{
         			bat "docker-compose up -d --force-recreate --no-deps --build"
+				bat "rename src\\.env.example .env"
 				bat "docker-compose exec -T php composer install"
 				bat "docker-compose exec -T php php artisan key:generate"
 				echo 'building the application...'
